@@ -2,7 +2,7 @@
 
 pip install --upgrade pip
 pip install pyinstaller
-pip install aiogram
+pip install aiogram==2.25.1
 pip install requests
 pip install opencv-python
 pip install psutil
@@ -20,12 +20,9 @@ pip install pypiwin32
 pip install wave
 pip install pyttsx3
 pip install pywin32
-
+pip install pyaudio
 pyinstaller --noconfirm --onefile --windowed --icon "icon.ico" --version-file "version.py" --add-data "logs;logs/" --add-data "keyboards;keyboards/" --add-data "functions;functions/" --add-data "videoplayback.mp4;."  "main.py"
 
 
 rmdir /s /q __pycache__
 rmdir /s /q build
-
-:cmd
-pause null

